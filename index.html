@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#A61E2D">
+  <title>Cardora — Digital Greeting Card Studio</title>
+  <meta name="description" content="Design bespoke digital greeting cards with Object-Oriented software architecture, botanical vector illustrations, dynamic motion, and high-DPI export.">
+  <link rel="icon" type="image/svg+xml" href="assets/illustrations/botanical-sidebar.svg">
+  
+  <!-- Premium Stationery Typography: Serif, Editorial, and Calligraphy Cursive -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+
+  <!-- Site Compact Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#studio" class="brand" aria-label="Cardora Studio Home">
+        <!-- Botanical Sprout Brand Mark -->
+        <svg class="brand-symbol" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="#FCEEEE" stroke="#E8E2D8"/>
+          <path d="M18 26 C18 19 19 14 24 10" stroke="#8C4A42" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 26 C18 20 16 16 11 14" stroke="#8C4A42" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M24 10 C21 8 20 5 24 4 C27 7 26 9 24 10 Z" fill="#81917A"/>
+          <path d="M11 14 C13 12 13 9 10 9 C8 11 9 13 11 14 Z" fill="#81917A"/>
+          <circle cx="18" cy="11" r="3.5" fill="#A61E2D"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Cardora</span>
+          <span class="brand-desc">Digital Greeting Card Studio</span>
+        </div>
+      </a>
+
+      <!-- View Switcher Tabs -->
+      <nav class="nav-links" id="main-nav" aria-label="Application Views">
+        <button class="nav-link active" data-view="studio">Studio</button>
+        <button class="nav-link" data-view="templates">Templates</button>
+        <button class="nav-link" data-view="animation">Animation</button>
+        <button class="nav-link" data-view="export">Export</button>
+        <a href="oops-guide.html" class="nav-link highlight-link" title="View Detailed OOP Architecture">
+          <span>OOP Guide</span>
+          <svg class="icon" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </nav>
+
+      <!-- Header Utilities & Theme Switcher -->
+      <div class="header-actions">
+        <!-- Theme Toggle (Light / Dark) -->
+        <button class="btn btn-icon theme-toggle-btn" id="theme-toggle-header" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+          <svg class="icon theme-icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon theme-icon-moon" style="display:none;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="btn btn-secondary btn-sm" id="nav-my-cards">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <span>My Cards</span>
+        </button>
+        <button class="btn btn-icon" id="nav-settings" title="Settings">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+        <button class="btn btn-icon mobile-menu-btn" id="mobile-toggle" aria-label="Open menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="modal-backdrop" id="mobile-drawer" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 300px; height: 100%; border-radius: 0; position: fixed; left: 0; top: 0;">
+      <div class="modal-header">
+        <span class="brand-name">Cardora</span>
+        <button class="btn btn-icon" id="close-drawer" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="justify-content: space-between;">
+        <nav style="display: flex; flex-direction: column; gap: 12px;">
+          <button class="drawer-link nav-link active" data-view="studio" style="text-align: left; width: 100%;">Studio</button>
+          <button class="drawer-link nav-link" data-view="templates" style="text-align: left; width: 100%;">Templates</button>
+          <button class="drawer-link nav-link" data-view="animation" style="text-align: left; width: 100%;">Animation</button>
+          <button class="drawer-link nav-link" data-view="export" style="text-align: left; width: 100%;">Export</button>
+          <a href="oops-guide.html" class="nav-link highlight-link" style="display: block; text-align: left;">OOP Guide</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         HERO SECTION: 3-COLUMN EDITORIAL STATIONERY SHOWCASE (EXACT TO REFERENCE)
+         ======================================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <!-- Decorative Botanical Sprig in Top-Left Corner -->
+      <img src="assets/illustrations/botanical-sidebar.svg" alt="" class="hero-corner-botanical" aria-hidden="true" />
+
+      <div class="container hero-grid-3col">
+        <!-- Column 1: Copy & CTAs -->
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span>EDITORIAL DIGITAL STATIONERY</span>
+          </div>
+          <h1 class="hero-title" id="hero-title">
+            Turn Moments Into <span class="accent">Beautiful Memories</span>
+          </h1>
+          <p class="hero-subtitle">
+            Design bespoke digital greeting cards with object-oriented typography, fine botanical vector artwork, physics-driven particle animations, and print-grade PNG exports.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" id="hero-create-btn">
+              <span>Start Creating Your Card</span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn-secondary" id="hero-templates-btn">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>Explore Templates</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Column 2: Layered 3D Visual Cards Showcase -->
+        <div class="hero-artwork-wrap" aria-hidden="true">
+          <div class="artwork-bg-shape"></div>
+          <img src="assets/illustrations/botanical-sidebar.svg" alt="" class="artwork-botanical-branch" />
+
+          <!-- Back Card (Anniversary navy & gold) -->
+          <div class="card-layer card-layer-back">
+            <div>
+              <h4>Anniversary</h4>
+              <div style="font-size: 0.65rem; color: #C6A15B; letter-spacing: 0.12em; margin-top: 4px;">BESPOKE EDITION</div>
+            </div>
+            <p>Forever &amp; Always</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(198,161,91,0.35); padding-top: 8px;">
+              <span style="font-size: 0.68rem; color: #C6A15B; letter-spacing: 0.08em;">GOLD FOIL ACCENTS</span>
+              <svg style="width: 14px; height: 14px; fill: #C6A15B;" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+
+          <!-- Front Card (Botanical Birthday with Watercolor Floral Corners) -->
+          <div class="card-layer card-layer-front">
+            <img src="assets/illustrations/watercolor-floral-corner.svg" class="card-front-corner-tl" alt="" />
+            <img src="assets/illustrations/watercolor-floral-corner.svg" class="card-front-corner-br" alt="" />
+            <div class="card-front-content">
+              <div class="card-front-tracked">H A P P Y</div>
+              <div class="card-front-title">Birthday</div>
+              <div class="card-front-sub">wishing you a year filled with joy</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: 4-Item Feature List (Inside Hero exactly as shown in screenshot) -->
+        <div class="hero-features-col">
+          <div class="hero-feature-item">
+            <div class="feature-icon-badge">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Vector Typography</h4>
+              <p>Scalable serif &amp; sans styles</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="feature-icon-badge">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Botanical Linework</h4>
+              <p>Hand-crafted SVG elements</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="feature-icon-badge">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Particle Physics</h4>
+              <p>Confetti &amp; floating lights</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="feature-icon-badge">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Print-Grade Export</h4>
+              <p>300 DPI high-resolution PNG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 1: CARD STUDIO (DEFAULT ACTIVE VIEW)
+         ======================================================================= -->
+    <section class="app-view is-visible studio-wrap" id="view-studio">
+      <div class="container">
+        <div class="editor-workspace">
+          <!-- Top Studio Toolbar -->
+          <div class="editor-toolbar">
+            <div class="toolbar-group">
+              <span class="toolbar-brand-label">Add Elements</span>
+              <div class="toolbar-sep"></div>
+              <button class="btn btn-secondary btn-sm" id="tool-new" title="New Blank Card">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                <span>New</span>
+              </button>
+              <button class="btn btn-secondary btn-sm" id="tool-save" title="Save Project">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12l4 4v12a2 2 0 0 1-2 2Z"/><path d="M7 3v6h10V3M7 21v-8h10v8"/></svg>
+                <span>Save</span>
+              </button>
+              <div class="toolbar-sep"></div>
+              <button class="btn-icon" id="tool-undo" title="Undo (Ctrl+Z)" disabled>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+              </button>
+              <button class="btn-icon" id="tool-redo" title="Redo (Ctrl+Y)" disabled>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M21 7v6h-6"/><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3L21 13"/></svg>
+              </button>
+            </div>
+
+            <!-- Center Zoom & Alignment Controls -->
+            <div class="toolbar-group">
+              <button class="btn-icon" id="tool-zoom-out" title="Zoom Out">
+                <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M8 11h6"/></svg>
+              </button>
+              <span class="zoom-indicator" id="zoom-value">100%</span>
+              <button class="btn-icon" id="tool-zoom-in" title="Zoom In">
+                <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+              </button>
+              <button class="btn btn-secondary btn-sm" id="tool-fit" title="Fit to Stage">Fit</button>
+              <div class="toolbar-sep"></div>
+              <button class="btn-icon" id="tool-align-center-quick" title="Center Selected Element">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M18 4H6M21 12H3M18 20H6"/></svg>
+              </button>
+              <button class="btn-icon" id="tool-dup-quick" title="Duplicate Selected">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <button class="btn-icon" id="tool-del-quick" title="Delete Selected">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+
+            <!-- Right Preview & Export Actions -->
+            <div class="toolbar-group">
+              <button class="btn btn-secondary btn-sm" id="tool-to-anim" title="Preview Motion">
+                <svg class="icon" viewBox="0 0 24 24"><polygon points="6 4 18 12 6 20 6 4" fill="currentColor"/></svg>
+                <span>Preview</span>
+              </button>
+              <button class="btn btn-primary btn-sm" id="tool-to-export" title="Export Card">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+                <span>Export</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3-Column Studio Body -->
+          <div class="editor-body">
+            <!-- Left Elements Palette: Clean Tabbed Navigation -->
+            <aside class="editor-panel-left">
+              <div class="sidebar-cat-nav">
+                <button class="cat-nav-btn active" data-cat-tab="text" title="Typography">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+                  <span>Text</span>
+                </button>
+                <button class="cat-nav-btn" data-cat-tab="shapes" title="Shapes & Accents">
+                  <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+                  <span>Shapes</span>
+                </button>
+                <button class="cat-nav-btn" data-cat-tab="artwork" title="Botanical Artwork">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Artwork</span>
+                </button>
+                <button class="cat-nav-btn" data-cat-tab="frames" title="Decorative Frames">
+                  <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="6" y="6" width="12" height="12"/></svg>
+                  <span>Frames</span>
+                </button>
+                <button class="cat-nav-btn" data-cat-tab="background" title="Card Background">
+                  <svg class="icon" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                  <span>Background</span>
+                </button>
+              </div>
+
+              <!-- Categorized Panels Content -->
+              <div class="elements-scroll">
+                <!-- Tab Pane 1: Text -->
+                <div class="cat-pane active" id="pane-text">
+                  <div class="element-group-title">Add Text Layer</div>
+                  <div class="tool-vertical-list">
+                    <button class="tool-list-card" id="add-heading-btn">
+                      <div class="tool-list-preview" style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600;">Heading</div>
+                      <span>Playfair Serif</span>
+                    </button>
+                    <button class="tool-list-card" id="add-script-btn">
+                      <div class="tool-list-preview" style="font-family: 'Alex Brush', cursive; font-size: 1.6rem; color: var(--color-burgundy-primary);">Birthday</div>
+                      <span>Calligraphy Script</span>
+                    </button>
+                    <button class="tool-list-card" id="add-subheading-btn">
+                      <div class="tool-list-preview" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem;">Subheading Note</div>
+                      <span>Cormorant Italic</span>
+                    </button>
+                    <button class="tool-list-card" id="add-text-btn">
+                      <div class="tool-list-preview" style="font-family: 'Inter', sans-serif; font-size: 0.85rem;">Body Message Text</div>
+                      <span>Inter Clean Sans</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab Pane 2: Shapes -->
+                <div class="cat-pane" id="pane-shapes" style="display:none;">
+                  <div class="element-group-title">Shapes &amp; Accents</div>
+                  <div class="tool-grid">
+                    <button class="tool-card" id="add-rect-btn">
+                      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                      <span>Rectangle</span>
+                    </button>
+                    <button class="tool-card" id="add-circle-btn">
+                      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+                      <span>Circle</span>
+                    </button>
+                    <button class="tool-card" id="add-heart-btn">
+                      <svg class="icon" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 2-3 2-4.5 0-3-2.5-5.5-5.5-5.5-2 0-3.5 1-4.5 2.5C10 5 8.5 4 6.5 4 3.5 4 1 6.5 1 9.5c0 1.5.5 3 2 4.5L12 21l7-7Z"/></svg>
+                      <span>Heart</span>
+                    </button>
+                    <button class="tool-card" id="add-star-btn">
+                      <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+                      <span>Star</span>
+                    </button>
+                    <button class="tool-card" id="add-diamond-btn">
+                      <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 22 12 12 22 2 12"/></svg>
+                      <span>Diamond</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab Pane 3: Artwork -->
+                <div class="cat-pane" id="pane-artwork" style="display:none;">
+                  <div class="element-group-title">Botanical &amp; Vectors</div>
+                  <div class="tool-grid">
+                    <button class="tool-card" id="add-svg-watercolor-corner">
+                      <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      <span>Floral Corner</span>
+                    </button>
+                    <button class="tool-card" id="add-svg-botanical">
+                      <svg class="icon" viewBox="0 0 24 24"><path d="M12 22v-9M12 13c-2-3-6-4-8-3 0 4 2 8 8 3ZM12 9c2-3 6-4 8-3 0 4-2 8-8 3Z"/></svg>
+                      <span>Branch</span>
+                    </button>
+                    <button class="tool-card" id="add-svg-balloons">
+                      <svg class="icon" viewBox="0 0 24 24"><ellipse cx="12" cy="10" rx="6" ry="8"/><path d="m12 18-2 3h4l-2-3v3"/></svg>
+                      <span>Balloons</span>
+                    </button>
+                    <button class="tool-card" id="add-svg-cake">
+                      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="9" rx="2"/><path d="M7 11V7a2 2 0 0 1 4 0v4M13 11V7a2 2 0 0 1 4 0v4"/></svg>
+                      <span>Cake</span>
+                    </button>
+                    <button class="tool-card" id="add-svg-ornament">
+                      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 2v4M9 6h6"/></svg>
+                      <span>Gold Jewel</span>
+                    </button>
+                    <button class="tool-card" id="add-svg-lamp">
+                      <svg class="icon" viewBox="0 0 24 24"><path d="M9 2h6M10 2v4M14 2v4M6 10h12l-2 10H8L6 10z"/></svg>
+                      <span>Lamp</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab Pane 4: Frames -->
+                <div class="cat-pane" id="pane-frames" style="display:none;">
+                  <div class="element-group-title">Geometric &amp; Floral Frames</div>
+                  <div class="tool-grid">
+                    <button class="tool-card" id="add-frame-gold-double">
+                      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="6" y="6" width="12" height="12"/></svg>
+                      <span>Gold Double</span>
+                    </button>
+                    <button class="tool-card" id="add-frame-floral">
+                      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+                      <span>Floral Frame</span>
+                    </button>
+                    <button class="tool-card" id="add-frame-geometric">
+                      <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 22 12 12 22 2 12"/></svg>
+                      <span>Diamond Border</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab Pane 5: Background -->
+                <div class="cat-pane" id="pane-background" style="display:none;">
+                  <div class="element-group-title">Card Palette &amp; Wash</div>
+                  <div class="palette-swatches" style="margin-bottom: 12px;">
+                    <button class="swatch-btn" style="background:#FAF7F0;" data-bg="#FAF7F0" title="Warm Ivory"></button>
+                    <button class="swatch-btn" style="background:#FFFFFF;" data-bg="#FFFFFF" title="Crisp White"></button>
+                    <button class="swatch-btn" style="background:#FDF5F5;" data-bg="#FDF5F5" title="Blush Wash"></button>
+                    <button class="swatch-btn" style="background:#FCEEEE;" data-bg="#FCEEEE" title="Pale Blush"></button>
+                    <button class="swatch-btn" style="background:#0D1117;" data-bg="#0D1117" title="Midnight Obsidian"></button>
+                    <button class="swatch-btn" style="background:#172033;" data-bg="#172033" title="Deep Navy"></button>
+                    <button class="swatch-btn" style="background:#2C3E2D;" data-bg="#2C3E2D" title="Emerald Botanical"></button>
+                    <button class="swatch-btn" style="background:#3D1822;" data-bg="#3D1822" title="Velvet Wine"></button>
+                  </div>
+
+                  <div class="field">
+                    <label for="bg-pattern-select">Subtle Pattern</label>
+                    <select class="form-select" id="bg-pattern-select">
+                      <option value="none">None (Clean)</option>
+                      <option value="dots">Subtle Gold Dots</option>
+                      <option value="lines">Stationery Lines</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Central Canvas Stage (Padded & Centered WYSIWYG) -->
+            <div class="editor-canvas-stage" id="canvas-stage">
+              <div class="card-canvas-container" id="canvas-wrapper">
+                <canvas id="card-canvas" width="1080" height="1080"></canvas>
+              </div>
+            </div>
+
+            <!-- Right Properties Inspector -->
+            <aside class="editor-panel-right">
+              <div class="inspector-tabs">
+                <button class="inspector-tab active" data-tab="element">Properties</button>
+                <button class="inspector-tab" data-tab="card">Card Settings</button>
+              </div>
+
+              <!-- Element Properties Tab -->
+              <div class="inspector-body" id="tab-element-body">
+                <div id="no-selection-msg" style="text-align: center; padding: 36px 8px; color: var(--color-text-muted);">
+                  <svg class="icon" style="width: 28px; height: 28px; margin-bottom: 8px; stroke: var(--color-border);" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+                  <p>Click any item on the card to edit typography, colors, or arrangement.</p>
+                </div>
+
+                <div id="selection-controls" style="display: none; flex-direction: column; gap: 14px;">
+                  <!-- Text Properties -->
+                  <div id="text-props-wrap">
+                    <div class="field">
+                      <label for="text-content-input">Text Content</label>
+                      <textarea class="form-control" id="text-content-input" rows="2"></textarea>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 8px;">
+                      <div class="field">
+                        <label for="font-family-select">Font Family</label>
+                        <select class="form-select" id="font-family-select">
+                          <option value="Alex Brush">Alex Brush (Calligraphy)</option>
+                          <option value="Playfair Display">Playfair Display (Serif)</option>
+                          <option value="Cormorant Garamond">Cormorant Garamond</option>
+                          <option value="Great Vibes">Great Vibes (Script)</option>
+                          <option value="Cinzel">Cinzel (Luxury Roman)</option>
+                          <option value="Inter">Inter (Clean Sans)</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label for="font-size-input">Size</label>
+                        <div style="display: flex; gap: 4px;">
+                          <button class="btn btn-secondary btn-sm" id="btn-font-dec" style="padding: 4px 8px;">-</button>
+                          <input type="number" class="form-control" id="font-size-input" min="12" max="200" step="2" style="text-align: center;">
+                          <button class="btn btn-secondary btn-sm" id="btn-font-inc" style="padding: 4px 8px;">+</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Text Styling Toggles -->
+                    <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+                      <button class="btn btn-secondary btn-sm" id="btn-bold" title="Toggle Bold"><b>B</b></button>
+                      <button class="btn btn-secondary btn-sm" id="btn-italic" title="Toggle Italic" style="font-style: italic;"><i>I</i></button>
+                      <button class="btn btn-secondary btn-sm" id="btn-align-left" title="Align Left">Left</button>
+                      <button class="btn btn-secondary btn-sm" id="btn-align-center" title="Align Center">Center</button>
+                      <button class="btn btn-secondary btn-sm" id="btn-align-right" title="Align Right">Right</button>
+                    </div>
+
+                    <!-- Letter Spacing & Line Height Sliders -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px;">
+                      <div class="field">
+                        <label for="letter-spacing-slider" style="font-size: 0.72rem;">Spacing (<span id="letter-spacing-val">0</span>px)</label>
+                        <input type="range" class="timeline-scrubber" id="letter-spacing-slider" min="-2" max="24" step="1" value="0">
+                      </div>
+                      <div class="field">
+                        <label for="line-height-slider" style="font-size: 0.72rem;">Height (<span id="line-height-val">1.3</span>)</label>
+                        <input type="range" class="timeline-scrubber" id="line-height-slider" min="0.8" max="2.2" step="0.1" value="1.3">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Color Swatches & Custom Picker -->
+                  <div class="field">
+                    <label>Element Color</label>
+                    <div class="palette-swatches">
+                      <button class="swatch-btn" style="background:#A61E2D;" data-color="#A61E2D" title="Crimson Burgundy"></button>
+                      <button class="swatch-btn" style="background:#E8A598;" data-color="#E8A598" title="Soft Rose Blush"></button>
+                      <button class="swatch-btn" style="background:#C6A15B;" data-color="#C6A15B" title="Champagne Gold"></button>
+                      <button class="swatch-btn" style="background:#E8C988;" data-color="#E8C988" title="Gold Light"></button>
+                      <button class="swatch-btn" style="background:#81917A;" data-color="#81917A" title="Sage Olive"></button>
+                      <button class="swatch-btn" style="background:#172033;" data-color="#172033" title="Navy Slate"></button>
+                      <button class="swatch-btn" style="background:#FAF7F0;" data-color="#FAF7F0" title="Warm Ivory"></button>
+                      <label class="custom-color-label" title="Custom Hex Color">
+                        <input type="color" id="custom-color-input" value="#A61E2D">
+                        <span class="custom-color-swatch"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Opacity Slider -->
+                  <div class="field">
+                    <label for="opacity-slider" style="font-size: 0.75rem;">Opacity (<span id="opacity-val">100</span>%)</label>
+                    <input type="range" class="timeline-scrubber" id="opacity-slider" min="10" max="100" step="5" value="100">
+                  </div>
+
+                  <!-- Layer Ordering & Actions -->
+                  <div class="field">
+                    <label>Arrange &amp; Manage</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                      <button class="btn btn-secondary btn-sm" id="btn-bring-front">Bring Forward</button>
+                      <button class="btn btn-secondary btn-sm" id="btn-send-back">Send Backward</button>
+                      <button class="btn btn-secondary btn-sm" id="btn-duplicate">Duplicate</button>
+                      <button class="btn btn-secondary btn-sm" id="btn-delete" style="color: var(--color-error); border-color: var(--color-border);">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Settings Tab -->
+              <div class="inspector-body" id="tab-card-body" style="display: none;">
+                <div class="field">
+                  <label for="card-title-input">Card Title</label>
+                  <input type="text" class="form-control" id="card-title-input" value="Botanical Birthday">
+                </div>
+
+                <div class="field">
+                  <label>Card Aspect Ratio</label>
+                  <div class="ratio-pill-grid">
+                    <button class="ratio-pill-btn active" data-ratio="square">Square 1:1</button>
+                    <button class="ratio-pill-btn" data-ratio="portrait">Portrait 4:5</button>
+                    <button class="ratio-pill-btn" data-ratio="story">Story 9:16</button>
+                    <button class="ratio-pill-btn" data-ratio="folded">Folded 5:7</button>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label>Card Background</label>
+                  <div class="palette-swatches">
+                    <button class="swatch-btn" style="background:#FAF7F0;" data-bg="#FAF7F0" title="Warm Ivory"></button>
+                    <button class="swatch-btn" style="background:#FFFFFF;" data-bg="#FFFFFF" title="Crisp White"></button>
+                    <button class="swatch-btn" style="background:#FDF5F5;" data-bg="#FDF5F5" title="Blush Rose"></button>
+                    <button class="swatch-btn" style="background:#FCEEEE;" data-bg="#FCEEEE" title="Pale Blush"></button>
+                    <button class="swatch-btn" style="background:#0D1117;" data-bg="#0D1117" title="Midnight Obsidian"></button>
+                    <button class="swatch-btn" style="background:#172033;" data-bg="#172033" title="Deep Navy"></button>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="bg-pattern-select-card">Paper Texture</label>
+                  <select class="form-select" id="bg-pattern-select-card">
+                    <option value="none">Clean Smooth</option>
+                    <option value="dots">Gold Stardust Dots</option>
+                    <option value="lines">Stationery Lines</option>
+                  </select>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Studio Bottom Status Bar (Resolutions, Active Element, Theme Switcher) -->
+          <div class="editor-status-bar">
+            <div class="status-left">
+              <span class="status-badge" id="status-card-size">1080 × 1080 px (1:1 Square)</span>
+              <span class="status-sep">•</span>
+              <span class="status-selection" id="status-selection">Selected: Text 'Birthday'</span>
+            </div>
+
+            <div class="status-center">
+              <div class="ratio-quick-pills">
+                <button class="quick-pill active" data-ratio="square">1:1</button>
+                <button class="quick-pill" data-ratio="portrait">4:5</button>
+                <button class="quick-pill" data-ratio="story">9:16</button>
+                <button class="quick-pill" data-ratio="folded">5:7</button>
+              </div>
+            </div>
+
+            <div class="status-right">
+              <span class="status-zoom-pill" id="status-zoom-pill">100%</span>
+              <button class="btn-text-sm" id="status-fit-btn">Fit</button>
+              <span class="status-sep">•</span>
+              <button class="btn btn-icon btn-sm theme-toggle-btn" id="theme-toggle-bottom" title="Toggle Dark/Light Mode">
+                <svg class="icon theme-icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon theme-icon-moon" style="display:none;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             FEATURED TEMPLATE SHOWCASE SECTION (IN STUDIO)
+             =================================================================== -->
+        <div class="studio-showcase-section" id="studio-showcase-section">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <span class="eyebrow-chip">Curated Collections</span>
+              <h2 class="serif-heading" style="font-size: 1.65rem; margin: 6px 0 3px 0;">Starter Occasion Templates</h2>
+              <p style="color: var(--color-text-muted); font-size: 0.88rem; margin: 0;">Click any template card to instantly load and edit it on the canvas above.</p>
+            </div>
+            <div class="showcase-header-actions">
+              <button class="btn btn-secondary btn-sm" id="btn-showcase-view-all">
+                <span>Browse Full Gallery</span>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-categories-bar" id="showcase-category-chips">
+            <button class="chip-btn active" data-showcase-cat="All">All Occasions</button>
+            <button class="chip-btn" data-showcase-cat="Birthday">Birthday</button>
+            <button class="chip-btn" data-showcase-cat="Anniversary">Anniversary</button>
+            <button class="chip-btn" data-showcase-cat="Wedding">Wedding</button>
+            <button class="chip-btn" data-showcase-cat="Festivals">Festivals</button>
+            <button class="chip-btn" data-showcase-cat="Congratulations">Congratulations</button>
+            <button class="chip-btn" data-showcase-cat="Thank You">Thank You</button>
+            <button class="chip-btn" data-showcase-cat="Friendship">Friendship</button>
+          </div>
+
+          <div class="showcase-grid" id="showcase-grid">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 2: TEMPLATE GALLERY
+         ======================================================================= -->
+    <section class="app-view templates-wrap" id="view-templates">
+      <div class="container">
+        <div class="view-head">
+          <h2>Starter Templates</h2>
+          <p>Choose an occasion design to open and customize in the Studio.</p>
+        </div>
+
+        <div class="filter-bar-wrap">
+          <div class="category-chips" id="category-chips">
+            <button class="chip-btn active" data-cat="All">All</button>
+            <button class="chip-btn" data-cat="Birthday">Birthday</button>
+            <button class="chip-btn" data-cat="Anniversary">Anniversary</button>
+            <button class="chip-btn" data-cat="Festivals">Festivals</button>
+            <button class="chip-btn" data-cat="Congratulations">Congratulations</button>
+            <button class="chip-btn" data-cat="Thank You">Thank You</button>
+            <button class="chip-btn" data-cat="Friendship">Friendship</button>
+            <button class="chip-btn" data-cat="New Beginnings">New Beginnings</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="search" id="template-search" placeholder="Search templates…" aria-label="Search templates">
+          </div>
+        </div>
+
+        <div class="templates-grid" id="templates-grid">
+          <!-- Populated by TemplateService -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 3: ANIMATION PREVIEW
+         ======================================================================= -->
+    <section class="app-view animation-wrap" id="view-animation">
+      <div class="container">
+        <div class="view-head">
+          <h2>Bring Your Card to Life</h2>
+          <p>Preview motion transitions and physics-based particle effects.</p>
+        </div>
+
+        <div class="anim-theater">
+          <!-- Theater Canvas & Scrubber -->
+          <div class="anim-stage-wrap">
+            <div class="anim-canvas-container">
+              <canvas id="anim-canvas" width="1080" height="1350"></canvas>
+            </div>
+
+            <div class="anim-timeline-bar">
+              <button class="btn btn-icon" id="anim-play-btn" title="Play / Pause">
+                <svg class="icon" viewBox="0 0 24 24"><polygon points="6 4 18 12 6 20 6 4" fill="currentColor"/></svg>
+              </button>
+              <button class="btn btn-icon" id="anim-restart-btn" title="Restart">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              </button>
+              <input type="range" class="timeline-scrubber" id="timeline-scrubber" min="0" max="100" value="0">
+              <span id="anim-time-label" style="font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted);">0.0s</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="anim-controls-panel">
+            <div class="control-block">
+              <div class="control-block-title">Entrance Transition</div>
+              <select class="form-select" id="anim-entrance-select">
+                <option value="slide-up" selected>Slide Up</option>
+                <option value="fade-in">Fade In</option>
+                <option value="scale-in">Scale In</option>
+                <option value="card-open">2.5D Card Fold</option>
+                <option value="sequential-reveal">Typography Reveal</option>
+              </select>
+            </div>
+
+            <div class="control-block">
+              <div class="control-block-title">Motion Effect</div>
+              <select class="form-select" id="anim-effect-select">
+                <option value="floating" selected>Gentle Float</option>
+                <option value="border-glow">Gold Border Glow</option>
+                <option value="none">Still</option>
+              </select>
+            </div>
+
+            <div class="control-block">
+              <div class="control-block-title">Particle Physics</div>
+              <select class="form-select" id="anim-particles-select">
+                <option value="petals" selected>Falling Botanical Petals</option>
+                <option value="confetti">Celebratory Confetti</option>
+                <option value="stars">Twinkling Golden Stars</option>
+                <option value="none">No Particles</option>
+              </select>
+            </div>
+
+            <div class="control-block">
+              <div class="control-block-title">Duration</div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <input type="range" class="timeline-scrubber" id="anim-duration-slider" min="1.5" max="6.0" step="0.5" value="3.5">
+                <span id="duration-val-label" style="font-size: 0.84rem; font-weight: 600;">3.5s</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px;">
+              <button class="btn btn-secondary" id="btn-return-studio" style="width: 100%;">
+                <svg class="icon" viewBox="0 0 24 24"><path d="m16 3 5 5-12 12-6 1 1-6Z"/><path d="m14 5 5 5"/></svg>
+                <span>Edit Card in Studio</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 4: EXPORT VIEW
+         ======================================================================= -->
+    <section class="app-view export-wrap" id="view-export">
+      <div class="container">
+        <div class="view-head">
+          <h2>Export Your Finished Card</h2>
+          <p>Download clean, high-resolution snapshots with zero editor controls.</p>
+        </div>
+
+        <div class="export-box">
+          <div class="export-preview-card">
+            <canvas id="export-thumbnail-canvas" width="400" height="500" style="max-width: 100%; max-height: 100%;"></canvas>
+          </div>
+
+          <div class="export-form">
+            <div class="field">
+              <label for="export-format-select">Format</label>
+              <select class="form-select" id="export-format-select">
+                <option value="image/png" selected>PNG (Lossless Quality)</option>
+                <option value="image/jpeg">JPEG (Compressed)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="export-scale-select">Resolution</label>
+              <select class="form-select" id="export-scale-select">
+                <option value="1.0">1x Screen Resolution</option>
+                <option value="2.0" selected>2x Print Quality (Supersampled)</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" id="download-final-btn" style="padding: 12px 24px; font-size: 1rem;">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+              <span>Download Card Image</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- My Projects Modal -->
+  <div class="modal-backdrop" id="modal-projects" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="serif-heading" style="font-size: 1.25rem;">Saved Projects</h3>
+        <button class="btn btn-icon" id="close-projects-btn" aria-label="Close">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="projects-list-body">
+        <!-- Rendered by ProjectService -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-backdrop" id="modal-settings" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="serif-heading" style="font-size: 1.25rem;">Studio Settings</h3>
+        <button class="btn btn-icon" id="close-settings-btn" aria-label="Close">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <label for="setting-theme-select">Theme</label>
+          <select class="form-select" id="setting-theme-select">
+            <option value="light" selected>Warm Ivory (Light)</option>
+            <option value="dark">Midnight Luxury (Dark)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+            <input type="checkbox" id="setting-reduced-motion">
+            <span>Reduced Motion (Accessible)</span>
+          </label>
+        </div>
+
+        <div style="border-top: 1px solid var(--color-border); padding-top: 14px;">
+          <button class="btn btn-secondary btn-sm" id="reset-workspace-btn" style="color: var(--color-error); border-color: var(--color-border);">
+            Reset Local Storage
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" role="status" aria-live="polite"></div>
+
+  <!-- =======================================================================
+       PROPER LUXURY EDITORIAL FOOTER
+       ======================================================================= -->
+  <footer class="site-footer" id="main-site-footer">
+    <div class="container footer-content-grid">
+      <!-- Col 1: Brand & OOP Architecture -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand-header">
+          <svg class="brand-monogram" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="6" fill="#A61E2D" />
+            <path d="M16 6 L26 16 L16 26 L6 16 Z" fill="none" stroke="#E8C988" stroke-width="1.8" />
+            <circle cx="16" cy="16" r="3" fill="#E8C988" />
+          </svg>
+          <span class="footer-brand-title serif-heading">Cardora Studio</span>
+        </div>
+        <p class="footer-brand-desc">
+          A bespoke digital greeting card design suite engineered with pure Object-Oriented Programming (OOP) architectures in Java and modern HTML5 canvas graphics.
+        </p>
+        <div class="footer-badges">
+          <span class="footer-badge">Java OOP Core</span>
+          <span class="footer-badge">HTML5 Canvas</span>
+          <span class="footer-badge">Vector SVGs</span>
+          <span class="footer-badge">300 DPI Export</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Studio Workspaces -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Studio Workspaces</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#view-studio" class="footer-nav-link" data-footer-view="studio">Interactive Card Studio</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-view="templates">Starter Template Library</a></li>
+          <li><a href="#view-animation" class="footer-nav-link" data-footer-view="animation">Motion &amp; Particle Theater</a></li>
+          <li><a href="#view-export" class="footer-nav-link" data-footer-view="export">High-DPI Lossless Export</a></li>
+          <li><a href="#" class="footer-nav-link" id="footer-projects-trigger">Saved Projects Storage</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Occasion Collections -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Card Occasions</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Birthday">Botanical &amp; Luxury Birthday</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Anniversary">Golden Jubilee Anniversary</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Wedding">Royal Heritage Wedding</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Festivals">Diwali Festival of Lights</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Congratulations">Milestone &amp; Honors</a></li>
+          <li><a href="#view-templates" class="footer-nav-link" data-footer-cat="Thank You">Gratitude &amp; Grace</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Viva & Academic Specs -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">OOP Architecture &amp; Viva</h4>
+        <p class="footer-oop-text">
+          Engineered for academic viva demonstration with full Encapsulation, Polymorphic Element Hierarchy, Memento History, and Factory Pattern.
+        </p>
+        <div class="footer-viva-box">
+          <a href="oops-guide.html" class="footer-viva-link">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Interactive OOP Viva Guide &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; 2026 Cardora Digital Greeting Card Studio. All rights reserved. Zero emojis &bull; Pure OOP &bull; Vector SVGs.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="oops-guide.html" class="bottom-link">Viva Specification</a>
+          <span class="dot-sep">&bull;</span>
+          <a href="https://github.com/shreyatbhojane/miniproject-oops" target="_blank" rel="noopener noreferrer" class="bottom-link">GitHub Repository</a>
+          <span class="dot-sep">&bull;</span>
+          <button class="back-to-top-btn" id="btn-back-to-top" title="Scroll to Top">
+            <span>Back to top</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

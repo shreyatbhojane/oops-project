@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Minimalist Abstract Petals & Botanical Sprig -->
+  <g class="petals" opacity="0.9">
+    <path d="M100 170 C100 120 110 80 130 35" stroke="#8C4A42" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Petals -->
+    <path d="M130 35 C115 20 125 5 145 10 C155 25 145 40 130 35 Z" fill="#F0A8A0" stroke="#E28178" stroke-width="1"/>
+    <path d="M120 70 C95 65 92 48 108 42 C122 52 125 65 120 70 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+    <path d="M125 105 C145 95 155 105 150 120 C135 125 125 115 125 105 Z" fill="#E8928A" stroke="#A61E2D" stroke-width="1"/>
+    <path d="M112 135 C90 135 85 118 100 112 C112 120 115 130 112 135 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+
+    <!-- Subtle Golden Pollen Accents -->
+    <circle cx="150" cy="50" r="2.5" fill="#C6A15B"/>
+    <circle cx="95" cy="85" r="2" fill="#C6A15B"/>
+    <circle cx="135" cy="140" r="2" fill="#C6A15B"/>
+  </g>
+</svg>

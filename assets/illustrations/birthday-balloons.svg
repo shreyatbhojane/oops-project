@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <!-- Strings -->
+  <path d="M75 145 C80 180 95 210 100 235" stroke="#A88B74" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M125 145 C120 180 105 210 100 235" stroke="#A88B74" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M100 130 C100 170 100 205 100 235" stroke="#A88B74" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="100" cy="235" r="3" fill="#C6A15B"/>
+
+  <!-- Left Balloon (Terracotta Pink) -->
+  <g class="balloon-left">
+    <ellipse cx="75" cy="85" rx="36" ry="46" fill="#F0A8A0" opacity="0.95"/>
+    <ellipse cx="64" cy="72" rx="9" ry="18" fill="#FFFFFF" opacity="0.45" transform="rotate(-18 64 72)"/>
+    <polygon points="75,131 71,137 79,137" fill="#E28178"/>
+  </g>
+
+  <!-- Right Balloon (Muted Gold / Ochre) -->
+  <g class="balloon-right">
+    <ellipse cx="125" cy="85" rx="36" ry="46" fill="#E8C988" opacity="0.95"/>
+    <ellipse cx="114" cy="72" rx="9" ry="18" fill="#FFFFFF" opacity="0.45" transform="rotate(-18 114 72)"/>
+    <polygon points="125,131 121,137 129,137" fill="#C6A15B"/>
+  </g>
+
+  <!-- Center Balloon (Burgundy) -->
+  <g class="balloon-center">
+    <ellipse cx="100" cy="68" rx="40" ry="50" fill="#A61E2D" opacity="0.95"/>
+    <ellipse cx="88" cy="54" rx="10" ry="20" fill="#FFFFFF" opacity="0.4" transform="rotate(-18 88 54)"/>
+    <polygon points="100,118 96,124 104,124" fill="#641E32"/>
+  </g>
+
+  <!-- Subtle Confetti Dots -->
+  <circle cx="35" cy="45" r="3" fill="#C6A15B"/>
+  <circle cx="160" cy="40" r="3.5" fill="#E8928A"/>
+  <circle cx="45" cy="140" r="2.5" fill="#81917A"/>
+  <circle cx="155" cy="135" r="3" fill="#C6A15B"/>
+</svg>

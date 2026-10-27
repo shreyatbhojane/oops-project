@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Top-Left Corner -->
+  <g class="corner-tl" stroke="#8C4A42" stroke-width="1.6" stroke-linecap="round">
+    <path d="M12 85 C14 45 45 14 85 12"/>
+    <path d="M35 15 C45 35 60 40 78 38"/>
+    <path d="M15 35 C35 45 40 60 38 78"/>
+    <!-- Leaves -->
+    <path d="M50 20 C60 12 72 16 75 28 C62 30 52 26 50 20 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+    <path d="M20 50 C12 60 16 72 28 75 C30 62 26 52 20 50 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+    <path d="M60 40 C72 35 82 45 80 55 C68 56 60 48 60 40 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+    <path d="M40 60 C35 72 45 82 55 80 C56 68 48 60 40 60 Z" fill="#81917A" stroke="#5F6F59" stroke-width="1"/>
+    <!-- Blossoms -->
+    <circle cx="38" cy="38" r="7" fill="#E8928A"/>
+    <circle cx="38" cy="38" r="3" fill="#C6A15B"/>
+    <circle cx="85" cy="12" r="5" fill="#F0A8A0"/>
+    <circle cx="12" cy="85" r="5" fill="#F0A8A0"/>
+  </g>
+</svg>

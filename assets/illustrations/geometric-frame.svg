@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none">
+  <!-- Outer Gold Frame -->
+  <rect x="20" y="20" width="260" height="360" stroke="#C6A15B" stroke-width="1.75"/>
+  <!-- Inner Frame with Inset Corners -->
+  <rect x="32" y="32" width="236" height="336" stroke="#C6A15B" stroke-width="0.85"/>
+  <!-- Diagonal Corner Lines -->
+  <line x1="20" y1="20" x2="32" y2="32" stroke="#C6A15B" stroke-width="1.2"/>
+  <line x1="280" y1="20" x2="268" y2="32" stroke="#C6A15B" stroke-width="1.2"/>
+  <line x1="20" y1="380" x2="32" y2="368" stroke="#C6A15B" stroke-width="1.2"/>
+  <line x1="280" y1="380" x2="268" y2="368" stroke="#C6A15B" stroke-width="1.2"/>
+
+  <!-- Diamond Corner Accents -->
+  <polygon points="26,16 32,22 26,28 20,22" fill="#C6A15B"/>
+  <polygon points="274,16 280,22 274,28 268,22" fill="#C6A15B"/>
+  <polygon points="26,372 32,378 26,384 20,378" fill="#C6A15B"/>
+  <polygon points="274,372 280,378 274,384 268,378" fill="#C6A15B"/>
+
+  <!-- Midpoint Flourishes -->
+  <polygon points="150,15 154,20 150,25 146,20" fill="#C6A15B"/>
+  <polygon points="150,375 154,380 150,385 146,380" fill="#C6A15B"/>
+  <polygon points="15,200 20,196 25,200 20,204" fill="#C6A15B"/>
+  <polygon points="275,200 280,196 285,200 280,204" fill="#C6A15B"/>
+</svg>

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 540" fill="none" role="img" aria-label="Cardora Botanical Illustration">
+  <!-- Subtle Organic Background Shapes -->
+  <g class="bg-shapes" opacity="0.85">
+    <path d="M190 20 C250 40 310 100 300 170 C290 240 240 280 260 340 C280 400 320 440 290 490 C260 540 180 520 150 480 C120 440 160 380 150 320 C140 260 80 220 100 140 C120 60 140 0 190 20 Z" fill="#FCEEEE"/>
+    <path d="M220 80 C270 110 315 160 305 210 C295 260 250 290 240 350 C230 400 270 440 250 470 C220 510 180 480 160 430 C140 380 170 330 175 270 C180 210 180 160 200 110 Z" fill="#F8E7E7"/>
+    <circle cx="270" cy="90" r="45" fill="#FAF0F0"/>
+    <circle cx="280" cy="270" r="35" fill="#FAF0F0"/>
+  </g>
+
+  <!-- Delicate Reddish-Brown Branches -->
+  <g class="branches" stroke="#8C4A42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main stem arching right -->
+    <path d="M200 520 C210 440 230 380 220 310 C210 240 240 180 265 95"/>
+    <!-- Secondary upper branch -->
+    <path d="M220 310 C235 270 260 250 290 240"/>
+    <path d="M240 180 C260 160 280 150 305 155"/>
+    <path d="M255 120 C270 105 295 100 310 108"/>
+    <!-- Lower branch -->
+    <path d="M210 430 C230 410 260 415 285 430"/>
+    <path d="M215 365 C230 355 255 360 275 375"/>
+  </g>
+
+  <!-- Sage Green Leaves -->
+  <g class="leaves" fill="#81917A" stroke="#5F6F59" stroke-width="1.2">
+    <!-- Leaf pair at (265, 95) -->
+    <path d="M265 95 C255 80 260 65 275 60 C280 75 275 90 265 95 Z"/>
+    <path d="M265 95 C280 90 295 95 300 110 C285 112 272 105 265 95 Z"/>
+
+    <!-- Leaves along middle branch -->
+    <path d="M240 180 C230 165 235 150 250 145 C255 160 250 175 240 180 Z"/>
+    <path d="M260 160 C265 145 280 140 290 150 C282 162 270 165 260 160 Z"/>
+    <path d="M280 150 C290 135 305 135 312 145 C302 155 290 156 280 150 Z"/>
+
+    <!-- Leaves on secondary branch -->
+    <path d="M235 270 C225 255 232 240 245 238 C250 252 245 265 235 270 Z"/>
+    <path d="M260 250 C268 235 282 232 292 242 C282 252 270 255 260 250 Z"/>
+    <path d="M220 310 C205 300 205 285 218 280 C226 292 225 304 220 310 Z"/>
+
+    <!-- Lower leaves -->
+    <path d="M215 365 C205 352 208 338 220 335 C226 348 222 360 215 365 Z"/>
+    <path d="M230 355 C240 342 255 342 262 352 C252 362 240 362 230 355 Z"/>
+    <path d="M210 430 C195 422 198 408 210 405 C216 416 215 426 210 430 Z"/>
+    <path d="M230 410 C242 398 258 400 265 412 C252 422 240 420 230 410 Z"/>
+  </g>
+
+  <!-- Terracotta & Blush Pink Delicate Flowers -->
+  <g class="flowers">
+    <!-- Main Blossom 1 (Top) -->
+    <g transform="translate(265, 85)">
+      <circle cx="-10" cy="-6" r="10" fill="#E8928A" opacity="0.95"/>
+      <circle cx="10" cy="-6" r="10" fill="#E8928A" opacity="0.95"/>
+      <circle cx="-12" cy="8" r="10" fill="#F0A8A0" opacity="0.95"/>
+      <circle cx="12" cy="8" r="10" fill="#F0A8A0" opacity="0.95"/>
+      <circle cx="0" cy="14" r="10" fill="#E28178" opacity="0.95"/>
+      <circle cx="0" cy="3" r="5.5" fill="#C6A15B"/>
+      <circle cx="0" cy="3" r="2.5" fill="#8C4A42"/>
+    </g>
+
+    <!-- Blossom 2 (Mid-Upper) -->
+    <g transform="translate(295, 185) scale(0.85)">
+      <circle cx="-8" cy="-6" r="9" fill="#F0A8A0" opacity="0.9"/>
+      <circle cx="8" cy="-6" r="9" fill="#E8928A" opacity="0.9"/>
+      <circle cx="-10" cy="6" r="9" fill="#E8928A" opacity="0.9"/>
+      <circle cx="10" cy="6" r="9" fill="#F0A8A0" opacity="0.9"/>
+      <circle cx="0" cy="11" r="9" fill="#E28178" opacity="0.9"/>
+      <circle cx="0" cy="2" r="5" fill="#C6A15B"/>
+      <circle cx="0" cy="2" r="2" fill="#8C4A42"/>
+    </g>
+
+    <!-- Blossom 3 (Mid-Lower) -->
+    <g transform="translate(280, 300) scale(0.9)">
+      <circle cx="-9" cy="-5" r="9.5" fill="#E8928A" opacity="0.95"/>
+      <circle cx="9" cy="-5" r="9.5" fill="#F0A8A0" opacity="0.95"/>
+      <circle cx="-10" cy="7" r="9.5" fill="#F0A8A0" opacity="0.95"/>
+      <circle cx="10" cy="7" r="9.5" fill="#E8928A" opacity="0.95"/>
+      <circle cx="0" cy="12" r="9.5" fill="#E28178" opacity="0.95"/>
+      <circle cx="0" cy="3" r="5" fill="#C6A15B"/>
+      <circle cx="0" cy="3" r="2" fill="#8C4A42"/>
+    </g>
+
+    <!-- Small Bud (Lower) -->
+    <g transform="translate(282, 425) scale(0.7)">
+      <circle cx="-6" cy="-4" r="7" fill="#F0A8A0"/>
+      <circle cx="6" cy="-4" r="7" fill="#E8928A"/>
+      <circle cx="0" cy="6" r="7" fill="#E28178"/>
+      <circle cx="0" cy="0" r="3.5" fill="#C6A15B"/>
+    </g>
+
+    <!-- Small Bud (Top Right) -->
+    <g transform="translate(305, 105) scale(0.65)">
+      <circle cx="-5" cy="-3" r="6" fill="#F0A8A0"/>
+      <circle cx="5" cy="-3" r="6" fill="#E8928A"/>
+      <circle cx="0" cy="5" r="6" fill="#E28178"/>
+      <circle cx="0" cy="0" r="3" fill="#C6A15B"/>
+    </g>
+  </g>
+
+  <!-- Delicate Gold Stamen & Sparkle Dots -->
+  <g class="accents" fill="#C6A15B">
+    <circle cx="240" cy="115" r="2"/>
+    <circle cx="250" cy="130" r="1.5"/>
+    <circle cx="270" cy="210" r="2"/>
+    <circle cx="310" cy="270" r="1.5"/>
+    <circle cx="265" cy="340" r="2"/>
+    <circle cx="295" cy="385" r="1.8"/>
+    <circle cx="245" cy="450" r="2"/>
+  </g>
+</svg>

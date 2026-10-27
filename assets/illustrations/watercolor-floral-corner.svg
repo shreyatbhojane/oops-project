@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <defs>
+    <!-- Soft blush watercolor gradient for petals -->
+    <radialGradient id="petalGrad1" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FCEEEE"/>
+      <stop offset="45%" stop-color="#E8928A"/>
+      <stop offset="85%" stop-color="#C84C42"/>
+      <stop offset="100%" stop-color="#8C2436"/>
+    </radialGradient>
+    <radialGradient id="petalGrad2" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFF5F5"/>
+      <stop offset="50%" stop-color="#F2A59F"/>
+      <stop offset="100%" stop-color="#D46860"/>
+    </radialGradient>
+    <radialGradient id="goldCenter" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF2CE"/>
+      <stop offset="60%" stop-color="#C6A15B"/>
+      <stop offset="100%" stop-color="#8A6B29"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Curving Slender Branches -->
+  <g stroke="#7D483F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M10 135 C18 90 55 45 110 22 C145 8 185 10 220 18"/>
+    <path d="M35 180 C45 130 80 85 140 55 C175 38 215 35 250 42"/>
+    <path d="M75 55 C60 85 52 120 48 160"/>
+    <path d="M110 22 C130 50 148 78 152 110"/>
+    <path d="M180 15 C190 40 195 65 190 90"/>
+    <path d="M220 18 C240 28 255 45 265 65"/>
+    <path d="M18 110 C8 135 5 165 8 195"/>
+  </g>
+
+  <!-- Muted Sage & Olive Leaves -->
+  <g stroke="#4F5F4A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Leaf pair 1 -->
+    <path d="M70 32 C85 20 102 24 105 40 C90 44 75 38 70 32 Z" fill="#81917A" opacity="0.9"/>
+    <path d="M85 30 L95 38" stroke="#4F5F4A" stroke-width="0.8"/>
+
+    <!-- Leaf pair 2 -->
+    <path d="M32 70 C20 85 24 102 40 105 C44 90 38 75 32 70 Z" fill="#81917A" opacity="0.9"/>
+    <path d="M30 85 L38 95" stroke="#4F5F4A" stroke-width="0.8"/>
+
+    <!-- Leaf pair 3 (tender green) -->
+    <path d="M135 15 C155 5 170 12 172 28 C155 32 140 25 135 15 Z" fill="#9FB098" opacity="0.85"/>
+    <path d="M15 135 C5 155 12 170 28 172 C32 155 25 140 15 135 Z" fill="#9FB098" opacity="0.85"/>
+
+    <!-- Leaf pair 4 -->
+    <path d="M175 25 C195 18 210 28 212 42 C194 44 182 36 175 25 Z" fill="#6E8067" opacity="0.95"/>
+    <path d="M25 175 C18 195 28 210 42 212 C44 194 36 182 25 175 Z" fill="#6E8067" opacity="0.95"/>
+
+    <!-- Leaf pair 5 (outer small leaves) -->
+    <path d="M225 35 C242 30 254 38 255 50 C240 52 230 45 225 35 Z" fill="#81917A" opacity="0.8"/>
+    <path d="M35 225 C30 242 38 254 50 255 C52 240 45 230 35 225 Z" fill="#81917A" opacity="0.8"/>
+
+    <!-- Accents along branch -->
+    <path d="M125 50 C140 42 152 48 153 60 C138 62 130 56 125 50 Z" fill="#9FB098" opacity="0.75"/>
+    <path d="M50 125 C42 140 48 152 60 153 C62 138 56 130 50 125 Z" fill="#9FB098" opacity="0.75"/>
+  </g>
+
+  <!-- Buds & Stardust Spangles -->
+  <g>
+    <!-- Golden Stardust / Specks -->
+    <circle cx="270" cy="55" r="3" fill="#C6A15B"/>
+    <circle cx="285" cy="40" r="1.8" fill="#E8C988"/>
+    <circle cx="55" cy="270" r="3" fill="#C6A15B"/>
+    <circle cx="40" cy="285" r="1.8" fill="#E8C988"/>
+    <circle cx="150" cy="95" r="2.2" fill="#C6A15B"/>
+    <circle cx="95" cy="150" r="2.2" fill="#C6A15B"/>
+    <circle cx="190" cy="70" r="2.5" fill="#E8C988"/>
+    <circle cx="70" cy="190" r="2.5" fill="#E8C988"/>
+
+    <!-- Rosebuds -->
+    <circle cx="245" cy="30" r="7" fill="url(#petalGrad2)"/>
+    <circle cx="245" cy="30" r="3" fill="#8C2436" opacity="0.6"/>
+    <circle cx="30" cy="245" r="7" fill="url(#petalGrad2)"/>
+    <circle cx="30" cy="245" r="3" fill="#8C2436" opacity="0.6"/>
+  </g>
+
+  <!-- Secondary Peony (Middle-upper right) -->
+  <g transform="translate(145, 25)">
+    <circle cx="18" cy="18" r="16" fill="url(#petalGrad2)" opacity="0.95"/>
+    <path d="M18 2 C28 2 34 10 32 20 C26 26 12 28 4 20 C2 10 10 2 18 2 Z" fill="#E8928A" opacity="0.85"/>
+    <path d="M8 8 C16 4 26 6 28 16 C22 24 10 22 8 8 Z" fill="#C84C42" opacity="0.75"/>
+    <circle cx="18" cy="18" r="5" fill="url(#goldCenter)"/>
+    <!-- Petal frills -->
+    <path d="M14 16 C16 13 20 13 22 16" stroke="#8C2436" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Secondary Peony (Middle-lower left) -->
+  <g transform="translate(25, 145)">
+    <circle cx="18" cy="18" r="16" fill="url(#petalGrad2)" opacity="0.95"/>
+    <path d="M18 2 C28 2 34 10 32 20 C26 26 12 28 4 20 C2 10 10 2 18 2 Z" fill="#E8928A" opacity="0.85"/>
+    <path d="M8 8 C16 4 26 6 28 16 C22 24 10 22 8 8 Z" fill="#C84C42" opacity="0.75"/>
+    <circle cx="18" cy="18" r="5" fill="url(#goldCenter)"/>
+    <path d="M14 16 C16 13 20 13 22 16" stroke="#8C2436" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Main Hero Rose Blossom (Corner Anchor) -->
+  <g transform="translate(50, 50)">
+    <!-- Outer Petals Layer 1 -->
+    <path d="M38 4 C58 2 72 16 70 36 C68 56 50 68 30 66 C10 64 -2 46 2 26 C6 8 20 6 38 4 Z" fill="url(#petalGrad1)" filter="drop-shadow(0 4px 10px rgba(140,36,54,0.18))"/>
+    
+    <!-- Outer Petal Overlaps -->
+    <path d="M48 10 C62 12 70 24 66 38 C58 50 42 56 28 50 C18 42 22 28 32 18 C40 10 44 10 48 10 Z" fill="#F2A59F" opacity="0.9"/>
+    
+    <!-- Mid Petals Layer 2 -->
+    <path d="M25 20 C35 12 50 16 54 28 C56 40 44 50 32 46 C20 42 16 30 25 20 Z" fill="url(#petalGrad2)"/>
+    <path d="M28 24 C38 18 48 24 46 34 C42 42 32 42 26 36 C22 30 24 26 28 24 Z" fill="#E8928A" opacity="0.95"/>
+    
+    <!-- Rose Core -->
+    <path d="M32 28 C38 24 44 28 42 34 C40 38 34 38 30 34 C28 30 30 29 32 28 Z" fill="#8C2436"/>
+    <circle cx="36" cy="32" r="4.5" fill="url(#goldCenter)"/>
+    
+    <!-- Delicate Stamens -->
+    <circle cx="34" cy="30" r="1" fill="#FFF"/>
+    <circle cx="38" cy="31" r="1" fill="#FFF"/>
+    <circle cx="35" cy="34" r="1" fill="#FFF"/>
+    <circle cx="37" cy="33" r="0.9" fill="#8A6B29"/>
+  </g>
+</svg>

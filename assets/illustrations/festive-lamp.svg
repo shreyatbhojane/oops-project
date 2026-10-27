@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Traditional Festive Diya / Lamp for Diwali & Celebrations -->
+  <g class="lamp">
+    <!-- Glowing Aura -->
+    <ellipse cx="100" cy="80" rx="35" ry="35" fill="#FAF0D8" opacity="0.6"/>
+
+    <!-- Flame -->
+    <path d="M100 48 C94 62 88 74 95 84 C100 90 106 88 108 82 C114 68 106 58 100 48 Z" fill="#E8928A"/>
+    <path d="M100 60 C97 70 94 77 98 83 C101 87 104 86 105 82 C108 73 103 66 100 60 Z" fill="#C6A15B"/>
+
+    <!-- Lamp Body (Terracotta / Deep Clay with Gold Trim) -->
+    <path d="M50 115 C50 145 80 155 100 155 C120 155 150 145 150 115 C130 125 110 120 100 112 C90 120 70 125 50 115 Z" fill="#A61E2D" stroke="#641E32" stroke-width="1.8"/>
+
+    <!-- Gold Engraved Rim -->
+    <path d="M50 115 Q100 126 150 115" stroke="#C6A15B" stroke-width="2.5" fill="none"/>
+    <circle cx="70" cy="128" r="2.5" fill="#C6A15B"/>
+    <circle cx="100" cy="135" r="3" fill="#C6A15B"/>
+    <circle cx="130" cy="128" r="2.5" fill="#C6A15B"/>
+
+    <!-- Base -->
+    <ellipse cx="100" cy="158" rx="28" ry="6" fill="#C6A15B"/>
+  </g>
+</svg>

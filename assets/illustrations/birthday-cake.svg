@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Cake Stand -->
+  <path d="M40 168 Q100 178 160 168 L152 176 L48 176 Z" fill="#E8E2D8"/>
+  <rect x="94" y="176" width="12" height="12" fill="#C6A15B"/>
+  <ellipse cx="100" cy="188" rx="35" ry="6" fill="#C6A15B"/>
+
+  <!-- Bottom Tier -->
+  <rect x="55" y="125" width="90" height="42" rx="4" fill="#FAF7F0" stroke="#E8E2D8" stroke-width="1.5"/>
+  <path d="M55 135 Q77 145 100 135 Q123 145 145 135" stroke="#A61E2D" stroke-width="2" fill="none"/>
+  <circle cx="75" cy="154" r="3" fill="#C6A15B"/>
+  <circle cx="100" cy="154" r="3" fill="#C6A15B"/>
+  <circle cx="125" cy="154" r="3" fill="#C6A15B"/>
+
+  <!-- Top Tier -->
+  <rect x="70" y="85" width="60" height="40" rx="3" fill="#F8E7E7" stroke="#E8E2D8" stroke-width="1.5"/>
+  <path d="M70 95 Q85 103 100 95 Q115 103 130 95" stroke="#A61E2D" stroke-width="1.8" fill="none"/>
+
+  <!-- Strawberries / Floral Accents on Top Tier -->
+  <circle cx="82" cy="85" r="5" fill="#A61E2D"/>
+  <circle cx="100" cy="83" r="5.5" fill="#A61E2D"/>
+  <circle cx="118" cy="85" r="5" fill="#A61E2D"/>
+  <path d="M82 80 L84 76" stroke="#81917A" stroke-width="1.5"/>
+  <path d="M100 78 L100 74" stroke="#81917A" stroke-width="1.5"/>
+  <path d="M118 80 L116 76" stroke="#81917A" stroke-width="1.5"/>
+
+  <!-- Birthday Candle -->
+  <rect x="98" y="55" width="4" height="26" rx="1.5" fill="#C6A15B"/>
+  <path d="M100 55 L100 50" stroke="#8C4A42" stroke-width="1.2"/>
+  <!-- Candle Flame -->
+  <path d="M100 38 C97 44 95 48 100 51 C105 48 103 44 100 38 Z" fill="#E8928A"/>
+  <circle cx="100" cy="46" r="2" fill="#FAF7F0"/>
+</svg>

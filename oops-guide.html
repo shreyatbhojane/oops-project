@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#A61E2D">
+  <title>Cardora — OOP Architecture & Concepts Guide</title>
+  <meta name="description" content="Detailed Object-Oriented Programming (OOP) Architecture guide for Cardora Digital Greeting Card Studio. Explains Encapsulation, Inheritance, Polymorphism, Composition, and Design Patterns.">
+  <link rel="icon" type="image/svg+xml" href="assets/illustrations/botanical-sidebar.svg">
+  <link rel="stylesheet" href="src/styles.css">
+  <style>
+    .guide-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .guide-hero {
+      text-align: center;
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 40px;
+    }
+    .guide-hero h1 {
+      font-size: 2.8rem;
+      color: var(--color-burgundy-deep);
+      margin-bottom: 12px;
+    }
+    .guide-hero p {
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .oop-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .oop-card h2 {
+      font-size: 1.75rem;
+      color: var(--color-burgundy-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .oop-card h3 {
+      font-size: 1.2rem;
+      color: var(--color-text-dark);
+      margin: 20px 0 10px;
+    }
+    .code-block {
+      background: #172033;
+      color: #FAF7F0;
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    .code-block .kw { color: #E8928A; font-weight: bold; }
+    .code-block .fn { color: #C6A15B; }
+    .code-block .str { color: #81917A; }
+    .code-block .cm { color: #667085; font-style: italic; }
+    .diagram-box {
+      background: var(--color-blush-surface);
+      border: 1px dashed var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .diagram-tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      font-family: monospace;
+      font-weight: 600;
+    }
+    .diagram-node {
+      background: var(--color-white);
+      border: 2px solid var(--color-burgundy-primary);
+      border-radius: 8px;
+      padding: 10px 20px;
+      color: var(--color-burgundy-deep);
+      box-shadow: var(--shadow-sm);
+    }
+    .diagram-children {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .diagram-child {
+      background: var(--color-white);
+      border: 1.5px solid var(--color-gold);
+      border-radius: 8px;
+      padding: 8px 16px;
+      color: var(--color-text-dark);
+    }
+    .qa-item {
+      background: var(--color-ivory);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .qa-item strong {
+      display: block;
+      color: var(--color-burgundy-deep);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .badge-pill {
+      background: var(--color-blush-bg);
+      color: var(--color-burgundy-primary);
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .back-btn-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Mini Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Cardora Studio Home">
+        <svg class="brand-symbol" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" fill="#FCEEEE" stroke="#E8E2D8"/>
+          <path d="M18 26 C18 19 19 14 24 10" stroke="#8C4A42" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 26 C18 20 16 16 11 14" stroke="#8C4A42" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M24 10 C21 8 20 5 24 4 C27 7 26 9 24 10 Z" fill="#81917A"/>
+          <path d="M11 14 C13 12 13 9 10 9 C8 11 9 13 11 14 Z" fill="#81917A"/>
+          <circle cx="18" cy="11" r="3.5" fill="#A61E2D"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Cardora</span>
+          <span class="brand-desc">OOP Architecture & Viva Guide</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-primary">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Back to Studio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="guide-container">
+    <div class="guide-hero">
+      <span class="badge-pill">Academic & Engineering Reference</span>
+      <h1>How OOP is Used in Cardora</h1>
+      <p>A comprehensive explanation of Object-Oriented Programming (OOP) concepts, class hierarchies, and design patterns implemented in the Cardora Greeting Card Studio.</p>
+    </div>
+
+    <!-- 1. The 4 Pillars of OOP -->
+    <section class="oop-card">
+      <h2>1. The Four Core OOP Pillars</h2>
+      <p>Cardora directly implements every fundamental OOP pillar within its graphics and state management engine:</p>
+
+      <h3>A. Abstraction</h3>
+      <p>Complex graphics routines, canvas coordinate transformations, and mathematical hit-testing are abstracted behind clean, intuitive method signatures. Users and view controllers interact only with high-level contracts like <code>element.render(ctx)</code> or <code>card.addElement(el)</code> without needing to manage low-level canvas matrices directly.</p>
+
+      <h3>B. Encapsulation</h3>
+      <p>Element and card properties (coordinates <code>_x</code>, <code>_y</code>, dimensions <code>_width</code>, <code>_height</code>, opacity <code>_opacity</code>, rotation <code>_rotation</code>) are kept strictly private using underscore prefixes. Access is controlled exclusively through validated getters and setters that enforce boundary safety.</p>
+
+      <div class="code-block">
+<span class="cm">// Encapsulation in src/models/CardElement.js</span>
+<span class="kw">export class</span> CardElement {
+  constructor({ x = 50, y = 50, width = 100, height = 100 } = {}) {
+    <span class="kw">this</span>._x = Number(x);
+    <span class="kw">this</span>._y = Number(y);
+    <span class="kw">this</span>._width = Math.<span class="fn">max</span>(10, Number(width));  <span class="cm">// Minimum width boundary enforced</span>
+    <span class="kw">this</span>._height = Math.<span class="fn">max</span>(10, Number(height));<span class="cm">// Minimum height boundary enforced</span>
+  }
+
+  <span class="cm">// Safe public getters & setters</span>
+  <span class="kw">get</span> <span class="fn">width</span>() { <span class="kw">return this</span>._width; }
+  <span class="kw">set</span> <span class="fn">width</span>(val) { <span class="kw">this</span>._width = Math.<span class="fn">max</span>(10, Number(val)); }
+}
+      </div>
+
+      <h3>C. Inheritance</h3>
+      <p>The specialized card items (<code>TextElement</code>, <code>ShapeElement</code>, and <code>SvgElement</code>) inherit all shared spatial properties, bounding boxes, hit-testing, and coordinate math from the base abstract class <code>CardElement</code>.</p>
+
+      <div class="diagram-box">
+        <div class="diagram-tree">
+          <div class="diagram-node">CardElement (Base Abstract Class)<br><small>x, y, width, height, rotation, opacity, containsPoint()</small></div>
+          <div style="font-size: 1.2rem; color: var(--color-burgundy-primary);">↓ extends</div>
+          <div class="diagram-children">
+            <div class="diagram-child">TextElement<br><small>fontFamily, fontSize, color, textAlign, textShadow</small></div>
+            <div class="diagram-child">ShapeElement<br><small>shapeType, fill, stroke, strokeWidth, dashArray</small></div>
+            <div class="diagram-child">SvgElement<br><small>svgKey, src, cachedImage, preserveAspectRatio</small></div>
+          </div>
+        </div>
+      </div>
+
+      <h3>D. Polymorphism</h3>
+      <p>Polymorphism allows the renderer to process an array of heterogeneous card elements uniformly. When <code>CardRenderer</code> paints the card, it simply invokes <code>element.render(ctx)</code>. At runtime, the JavaScript virtual machine dynamically dispatches the specific overridden implementation:</p>
+      <ul>
+        <li><code>TextElement.render(ctx)</code> renders multi-line typography with text-alignment and baseline metrics.</li>
+        <li><code>ShapeElement.render(ctx)</code> renders geometric paths (rectangles, circles, hearts, stars, diamonds).</li>
+        <li><code>SvgElement.render(ctx)</code> draws anti-aliased scalable vector illustrations from cached buffers.</li>
+      </ul>
+
+      <div class="code-block">
+<span class="cm">// Polymorphic Rendering Loop in src/services/CardRenderer.js</span>
+<span class="kw">render</span>(card, options = {}) {
+  card.renderBackground(<span class="kw">this</span>._ctx);
+
+  <span class="cm">// Pure Polymorphism: Same method call, different element behaviors</span>
+  card.elements.<span class="fn">forEach</span>(element => {
+    element.<span class="fn">render</span>(<span class="kw">this</span>._ctx, options);
+  });
+}
+      </div>
+    </section>
+
+    <!-- 2. Composition vs Inheritance -->
+    <section class="oop-card">
+      <h2>2. Composition Over Inheritance</h2>
+      <p>While elements inherit from <code>CardElement</code>, the top-level <code>GreetingCard</code> class uses <strong>Composition</strong> ("has-a" relationship) rather than inheritance:</p>
+      <ul>
+        <li>A <code>GreetingCard</code> <strong>has an</strong> array of <code>CardElement</code> objects.</li>
+        <li>It manages their z-order stacking (<code>bringForward</code>, <code>sendBackward</code>), element lifecycles (<code>addElement</code>, <code>removeElement</code>, <code>duplicateElement</code>), and canvas dimensions.</li>
+      </ul>
+      <div class="code-block">
+<span class="cm">// Composition in src/models/GreetingCard.js</span>
+<span class="kw">export class</span> GreetingCard {
+  constructor({ title = <span class="str">'Celebration'</span>, elements = [] } = {}) {
+    <span class="kw">this</span>._title = title;
+    <span class="kw">this</span>._elements = []; <span class="cm">// Composed collection of CardElement instances</span>
+    elements.<span class="fn">forEach</span>(el => <span class="kw">this</span>.<span class="fn">addElement</span>(el));
+  }
+}
+      </div>
+    </section>
+
+    <!-- 3. Software Design Patterns -->
+    <section class="oop-card">
+      <h2>3. Design Patterns Implemented</h2>
+      <p>Cardora leverages industry-standard software design patterns to maintain loose coupling and high cohesion:</p>
+
+      <h3>1. Memento Pattern (Undo & Redo)</h3>
+      <p><code>HistoryManager</code> captures serialized snapshots of the <code>GreetingCard</code> state prior to any mutation. It maintains two stacks (<code>_undoStack</code> and <code>_redoStack</code>), allowing effortless rollbacks without leaking internal class references.</p>
+
+      <h3>2. Factory Method Pattern (Template Catalog)</h3>
+      <p><code>TemplateService</code> encapsulates the instantiation of complex card templates. It produces ready-to-render <code>GreetingCard</code> instances configured with pre-composed typography and vector graphics.</p>
+
+      <h3>3. Strategy Pattern (Decoupled Rendering)</h3>
+      <p>The card model does not directly write to DOM canvas elements. Instead, rendering strategies are handled by external services:
+      <ul>
+        <li><code>CardRenderer</code>: Interactive onscreen editing with selection outlines and bounding anchor handles.</li>
+        <li><code>ExportService</code>: Offscreen supersampled rendering producing clean, print-quality PNG/JPEG files without UI controls.</li>
+        <li><code>AnimationController</code>: 60 FPS physics loop applying entrance transforms and particle motion.</li>
+      </ul>
+      </p>
+    </section>
+
+    <!-- 4. Viva / Interview Reference Questions -->
+    <section class="oop-card">
+      <h2>4. Viva & Evaluator Questions & Answers</h2>
+
+      <div class="qa-item">
+        <strong>Q1: What are the main classes in your project and their responsibilities?</strong>
+        <p><strong>Ans:</strong> <code>GreetingCard</code> is the composite entity managing the card's dimensions and layers. <code>CardElement</code> is the abstract base class for placed objects. <code>TextElement</code>, <code>ShapeElement</code>, and <code>SvgElement</code> represent concrete visual objects. <code>CardRenderer</code>, <code>TemplateService</code>, <code>HistoryManager</code>, and <code>ExportService</code> represent the service layer.</p>
+      </div>
+
+      <div class="qa-item">
+        <strong>Q2: How does your code demonstrate Polymorphism?</strong>
+        <p><strong>Ans:</strong> In <code>CardRenderer.render()</code>, we iterate over a polymorphic list of <code>CardElement</code> objects and invoke <code>element.render(ctx)</code>. Each subclass implements its own rendering logic without the renderer needing to check element types with conditional statements (no <code>if (type === 'text')</code>).</p>
+      </div>
+
+      <div class="qa-item">
+        <strong>Q3: How would this architecture translate to Java (JavaFX or Swing)?</strong>
+        <p><strong>Ans:</strong> The architecture maps 1:1 to Java. <code>CardElement</code> becomes an <code>abstract class CardElement</code> implementing a <code>Renderable</code> interface. <code>TextElement</code>, <code>ShapeElement</code>, and <code>SvgElement</code> extend it. The <code>CardRenderer</code> receives a <code>GraphicsContext</code> (JavaFX) or <code>Graphics2D</code> (Swing) instead of the HTML5 canvas context.</p>
+      </div>
+
+      <div class="qa-item">
+        <strong>Q4: Why did you choose Composition for the GreetingCard class?</strong>
+        <p><strong>Ans:</strong> Adhering to the "Composition over Inheritance" principle, a card is not a special type of element; rather, it aggregates and coordinates multiple elements. Composition provides greater flexibility to add, remove, and reorder elements dynamically at runtime.</p>
+      </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 36px;">
+      <a href="index.html" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+        <span>Return to Cardora Studio</span>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align: center; font-size: 0.8125rem; color: var(--color-text-muted);">
+      © 2026 Cardora Digital Greeting Card Studio · Academic OOP Specification & Architectural Blueprint.
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <!-- Outer Frame -->
+  <rect x="40" y="40" width="720" height="720" stroke="#C6A15B" stroke-width="2" stroke-opacity="0.9"/>
+  <!-- Inner Frame with offset -->
+  <rect x="58" y="58" width="684" height="684" stroke="#C6A15B" stroke-width="1" stroke-opacity="0.75"/>
+
+  <!-- Inset Corner Crossings -->
+  <line x1="40" y1="40" x2="58" y2="58" stroke="#C6A15B" stroke-width="1.5" stroke-opacity="0.85"/>
+  <line x1="760" y1="40" x2="742" y2="58" stroke="#C6A15B" stroke-width="1.5" stroke-opacity="0.85"/>
+  <line x1="40" y1="760" x2="58" y2="742" stroke="#C6A15B" stroke-width="1.5" stroke-opacity="0.85"/>
+  <line x1="760" y1="760" x2="742" y2="742" stroke="#C6A15B" stroke-width="1.5" stroke-opacity="0.85"/>
+
+  <!-- Diamond Corner Jewels -->
+  <polygon points="49,36 56,49 49,62 42,49" fill="#C6A15B"/>
+  <polygon points="751,36 758,49 751,62 744,49" fill="#C6A15B"/>
+  <polygon points="49,738 56,751 49,764 42,751" fill="#C6A15B"/>
+  <polygon points="751,738 758,751 751,764 744,751" fill="#C6A15B"/>
+
+  <!-- Midpoint Golden Medallions -->
+  <g transform="translate(400, 40)">
+    <circle cx="0" cy="0" r="4.5" fill="#C6A15B"/>
+    <circle cx="0" cy="0" r="2" fill="#FFF8E7"/>
+    <path d="M-18 0 L-8 -3 L-8 3 Z M18 0 L8 -3 L8 3 Z" fill="#C6A15B"/>
+  </g>
+  <g transform="translate(400, 760)">
+    <circle cx="0" cy="0" r="4.5" fill="#C6A15B"/>
+    <circle cx="0" cy="0" r="2" fill="#FFF8E7"/>
+    <path d="M-18 0 L-8 -3 L-8 3 Z M18 0 L8 -3 L8 3 Z" fill="#C6A15B"/>
+  </g>
+  <g transform="translate(40, 400)">
+    <circle cx="0" cy="0" r="4.5" fill="#C6A15B"/>
+    <circle cx="0" cy="0" r="2" fill="#FFF8E7"/>
+    <path d="M0 -18 L-3 -8 L3 -8 Z M0 18 L-3 8 L3 8 Z" fill="#C6A15B"/>
+  </g>
+  <g transform="translate(760, 400)">
+    <circle cx="0" cy="0" r="4.5" fill="#C6A15B"/>
+    <circle cx="0" cy="0" r="2" fill="#FFF8E7"/>
+    <path d="M0 -18 L-3 -8 L3 -8 Z M0 18 L-3 8 L3 8 Z" fill="#C6A15B"/>
+  </g>
+</svg>

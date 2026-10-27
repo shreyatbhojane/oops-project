@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Symmetrical Royal Gold Ornament -->
+  <g stroke="#C6A15B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center Jewel -->
+    <polygon points="100,75 118,100 100,125 82,100" fill="#FAF7F0"/>
+    <circle cx="100" cy="100" r="5" fill="#A61E2D"/>
+
+    <!-- Flourish Spokes -->
+    <path d="M100 75 C100 45 80 40 70 50 C60 60 70 75 88 84"/>
+    <path d="M100 75 C100 45 120 40 130 50 C140 60 130 75 112 84"/>
+    <path d="M100 125 C100 155 80 160 70 150 C60 140 70 125 88 116"/>
+    <path d="M100 125 C100 155 120 160 130 150 C140 140 130 125 112 116"/>
+
+    <!-- Side Petals -->
+    <path d="M82 100 C52 100 47 80 57 70 C67 60 82 70 91 88"/>
+    <path d="M82 100 C52 100 47 120 57 130 C67 140 82 130 91 112"/>
+    <path d="M118 100 C148 100 153 80 143 70 C133 60 118 70 109 88"/>
+    <path d="M118 100 C148 100 153 120 143 130 C133 140 118 130 109 112"/>
+
+    <!-- Radiating Stars -->
+    <circle cx="100" cy="35" r="3" fill="#C6A15B"/>
+    <circle cx="100" cy="165" r="3" fill="#C6A15B"/>
+    <circle cx="35" cy="100" r="3" fill="#C6A15B"/>
+    <circle cx="165" cy="100" r="3" fill="#C6A15B"/>
+  </g>
+</svg>
